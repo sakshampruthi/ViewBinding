@@ -1,0 +1,3 @@
+rootProject.name = "ViewBinding"
+include ':app'
+include ':viewbinding'

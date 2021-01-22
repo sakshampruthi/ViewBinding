@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ViewBinding</string>
+    <string name="view_bind">View Binding works</string>
+    <string name="click_me">Click Me!</string>
+</resources>
