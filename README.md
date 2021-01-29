@@ -20,8 +20,8 @@ enable viewbinding in your app/build.gradle (Module level):
 ```groovy
 android {
     ....
-    viewBinding {
-        enabled = true
+    buildFeatures {
+        viewBinding true
     }
 }
 ```
