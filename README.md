@@ -74,7 +74,24 @@ class MainActivity : AppCompatActivity() {
     }
 }
 ```
+For Fragment the delgation is shown below
+```kotlin
+class MainFragment : Fragment(R.layout.fragment_main) {
 
+     private val binding: FragmentMainBinding by viewBinding()
+     
+     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+	
+         binding.textView.text = getString(R.string.view_bind)  //replacing findViewById by binding
+
+        binding.clickMe.setOnClickListener {
+            context?.toast("View Binding Works")
+        }
+        ....
+    }
+}
+```
 
 
 If you using proguard, add this line to your proguard-rules.pro.
