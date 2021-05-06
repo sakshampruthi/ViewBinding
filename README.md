@@ -42,11 +42,14 @@ If you use findViewById or kotlin syntheics(depreciated) follow this process:
 ```kotlin
 class MainActivity : AppCompatActivity() {
 
+    lateinit var textview: textview;
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main);    //replace this with view binding as shown below
           
-        findViewById(R.id.textView).text = getString(R.string.view_bind)
+	textview = findViewById(R.id.textView)
+        textView.text = getString(R.string.view_bind)
 
         findViewById(R.id.clickMe).setOnClickListener {
             toast("View Binding Works")
