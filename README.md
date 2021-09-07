@@ -6,6 +6,19 @@
 A library to use [View Binding](https://developer.android.com/topic/libraries/view-binding) using a single line by delegation in Kotlin
 
 ### Adding dependencies
+if your gradle version is 7.0 or above :  
+Add this to your settings.gradle (Project level):
+```groovy
+dependencyResolutionManagement {
+	repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+	repositories {
+		....
+		maven { url 'https://jitpack.io' }
+	}
+}
+```
+
+If your gradle version is below 7.0 :  
 Add this to your build.gradle (Project level):
 ```groovy
 allprojects {
@@ -15,6 +28,9 @@ allprojects {
 	}
 }
 ```
+
+
+
 
 enable viewbinding in your app/build.gradle (Module level):
 ```groovy
